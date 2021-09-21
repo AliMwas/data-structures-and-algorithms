@@ -28,7 +28,7 @@ const sortStarWarsCharacters = (starWarsArr) => {
   // Solution code here...
   let answer = starWarsArr.sort((function( a, b ){return b.height - a.height}));
   return answer;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -135,6 +135,12 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  recipe.ingredients.forEach(ingredient => {
+    let monkeys = ingredient.slice(ingredient.indexOf(' ') +1);
+    let monkeySplice = monkeys.slice(monkeys.indexOf(' ') + 1);
+
+    result.push(monkeySplice);
+  });
   return result;
 };
 
